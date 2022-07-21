@@ -1,10 +1,14 @@
-<div class="login-container d-flex flex-column justify-content-center ">
+<div class="login-container d-flex flex-column justify-content-center">
   <div class="row">
+    <div class="d-none d-lg-flex col-7 flex-column justify-content-center">
+      <h1 class="text-white">Movam</h1>
+      <h3 class="welcome-note">Welcome to Movam</h3>
+    </div>
     <form
       [formGroup]="loginDetails"
-      class="form-container col-10  col-lg-5 d-flex flex-column"
+      class="form-container col-10 col-lg-5 d-flex flex-column"
     >
-    <section class="d-flex flex-column">
+      <section class="d-flex flex-column">
         <label class="login-label" for="name">Your Name</label>
 
         <input
@@ -16,7 +20,10 @@
         />
         <div
           class="error"
-          *ngIf="loginDetails.get('name')?.hasError('required') && loginDetails.get('name')?.dirty"
+          *ngIf="
+            loginDetails.get('name')?.hasError('required') &&
+            loginDetails.get('name')?.dirty
+          "
         >
           Name is required
         </div>
@@ -33,16 +40,22 @@
         />
         <div
           class="error"
-          *ngIf="loginDetails.get('email')?.hasError('required') && loginDetails.get('email')?.dirty"
+          *ngIf="
+            loginDetails.get('email')?.hasError('required') &&
+            loginDetails.get('email')?.dirty
+          "
         >
           Email is required
         </div>
         <div
-        class="error"
-        *ngIf="loginDetails.get('email')?.hasError('email') && loginDetails.get('email')?.dirty "
-      >
-        Enter a Valid Email Address
-      </div>
+          class="error"
+          *ngIf="
+            loginDetails.get('email')?.hasError('email') &&
+            loginDetails.get('email')?.dirty
+          "
+        >
+          Enter a Valid Email Address
+        </div>
       </section>
       <section class="d-flex flex-column">
         <label class="login-label" for="password">Password</label>
@@ -57,19 +70,23 @@
         <div
           class="error"
           *ngIf="
-            loginDetails.get('password')?.hasError('required') && loginDetails.get('password')?.dirty
+            loginDetails.get('password')?.hasError('required') &&
+            loginDetails.get('password')?.dirty
           "
         >
           Password is required
         </div>
         <div
-        class="error"
-        *ngIf="
-          (loginDetails.get('password')?.hasError('pattern') || loginDetails.get('password')?.hasError('minlength')) && loginDetails.get('password')?.dirty
-        "
-      >
-        Password must be at least 6 characters long and contain at least one number, one uppercase and one lowercase letter, one special character
-      </div>
+          class="error"
+          *ngIf="
+            (loginDetails.get('password')?.hasError('pattern') ||
+              loginDetails.get('password')?.hasError('minlength')) &&
+            loginDetails.get('password')?.dirty
+          "
+        >
+          Password must be at least 6 characters long and contain at least one
+          number, one uppercase and one lowercase letter, one special character
+        </div>
       </section>
 
       <div class="action">

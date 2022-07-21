@@ -87,8 +87,10 @@ label {
 }
 
 .login-container {
-  background-color: #02042d;
-  height: 100vh;
   padding:0 20px;
+  height: 100%;
 }
 
+.welcome-note{
+  color:  #5B5C65;
+}

@@ -1,0 +1,22 @@
+<div class="user-details pt-3 text-white d-flex flex-column justify-content-center align-items-center">
+    <h1>User Information</h1>
+    <ul class="list-unstyled border border-primary col-8 d-flex flex-column align-items-center" *ngIf="userDetails">
+<li *ngFor="let userDetail of userDetails">
+<section class="d-flex justify-content-between">
+    <span>Name</span>
+    <span>{{userDetail.name}}</span>
+</section>
+<section class="d-flex justify-content-between">
+    <span>Email</span>
+    <span>{{userDetail.email}}</span>
+</section>
+<section class="d-flex justify-content-between">
+    <span>Password</span>
+    <span>{{userDetail.password}}</span>
+</section>
+</li>
+    </ul>
+    <div *ngIf="!userDetails">
+        User Details are not available.
+    </div>
+</div>

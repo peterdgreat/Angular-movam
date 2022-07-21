@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, UntypedFormBuilder, FormControl } from '@angular/forms';
+import { Validators, FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserDetailsService } from 'src/app/services/user-details.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-
   loading: boolean = false;
   type: string = 'submit';
   submitted: boolean = false;
@@ -26,16 +26,14 @@ export class LoginComponent implements OnInit {
       ),
     ]),
   });
-  
 
   constructor(
     private router: Router,
-    private fb: UntypedFormBuilder,
+    private fb: FormBuilder,
+    private userDetails: UserDetailsService
   ) {}
 
-  ngOnDestroy(): void {
-
-  }
+  ngOnDestroy(): void {}
 
   ngOnInit(): void {}
 
@@ -44,15 +42,16 @@ export class LoginComponent implements OnInit {
     if (this.loginDetails.invalid) {
       return;
     } else {
-
-
+      this.userDetails.setUserDetails([
+        {
+          email: this.loginDetails.value?.email!,
+          name: this.loginDetails.value.name!,
+          password: this.loginDetails.value.password!,
+        },
+      ]);
+      this.router.navigate(['/user-details']);
     }
 
-    // this.router.navigate(['client/user/otp'], { state: { routeUrl: 'client/user/dashboard'} });
     console.log(this.loginDetails.value);
   }
-  forgotPassword() {
-    console.log('Forgot Password');
-  }
-
 }
