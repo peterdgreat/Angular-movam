@@ -9,12 +9,8 @@ import { UserDetailsService } from 'src/app/services/user-details.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  loading: boolean = false;
-  type: string = 'submit';
   submitted: boolean = false;
-  isOpen: boolean = false;
   hide: boolean = true;
-  errorMessage: string = '';
   loginDetails = this.fb.group({
     email: new FormControl('', [Validators.required, Validators.email]),
     name: new FormControl('', [Validators.required]),
@@ -51,7 +47,5 @@ export class LoginComponent implements OnInit {
       ]);
       this.router.navigate(['/user-details']);
     }
-
-    console.log(this.loginDetails.value);
   }
 }
