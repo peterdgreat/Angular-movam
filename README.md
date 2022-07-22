@@ -1,27 +1,54 @@
-# AngularMovam
+## Login Data
+This is a simple demo of how to pass data from one page to another.
+## Live demo
+[Login-data](https://login-detail-angular.netlify.app/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
-## Development server
+## Built With
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular
 
-## Code scaffolding
+- CSS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Boostrap
 
-## Build
+- Visual Studio Code
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Git & Github
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-## Running end-to-end tests
+### Setup
+* Open terminal
+* Clone this project by command git clone(git@github.com:peterdgreat/Angular-movam.git)
+* Cd into the project folder
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### install
+Run the following command to have all npm packages dependencies installed:
 
-## Further help
+npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Usage
+
+To start the webpack-dev-server, run the following command:
+
+npm start
+
+## Author
+
+👤 **Ajayi Peter**
+
+- GitHub: [@peterdgreat](https://github.com/peterdgreat)
+- Twitter: [@dev_Peter_0](https://twitter.com/dev_Peter_O)
+- LinkedIn: [ajayipeter](https://linkedin.com/in/ajayipeter)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
