@@ -88,7 +88,9 @@
           number, one uppercase and one lowercase letter, one special character
         </div>
       </section>
-
+      <div class="error" *ngIf="loginDetails.invalid && submitted">
+        Please enter your credentials to login.
+      </div>
       <div class="action">
         <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
       </div>
